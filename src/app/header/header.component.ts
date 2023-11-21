@@ -6,12 +6,10 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <p>
-      header works!
-    </p>
+    <h1>{{title}}</h1>
   `,
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-
+  title = 'My Notes';
 }
