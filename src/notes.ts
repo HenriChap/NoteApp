@@ -14,4 +14,4 @@ export const NOTES: Notes[] =[
         title:'Second task',
         text: 'Add new items to the list'
     }
-]
+];
