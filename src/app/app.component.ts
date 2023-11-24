@@ -7,7 +7,7 @@ import{ NotesListComponent } from  './notes-list/notes-list.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, HeaderComponent],
+  imports: [CommonModule, RouterOutlet, HeaderComponent, NotesListComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
