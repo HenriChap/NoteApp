@@ -3,7 +3,7 @@ export interface Note{
     title:string;
     text:string;
 }
-export const NOTES: Notes[] =[
+export const NOTES: Note[] =[
     {
         id:1,
         title:'First task',
