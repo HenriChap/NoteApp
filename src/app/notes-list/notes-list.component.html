@@ -1,1 +1,8 @@
-<p>notes-list works!</p>
+<div class="container">
+    <ul class="notes">
+        <li *ngFor="let note of notes">
+            <span class="note-title">{{note.title}}</span>
+            <span class="note-text">{{note.text}}</span>
+        </li>
+    </ul>
+</div>
