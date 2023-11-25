@@ -1,7 +1,7 @@
 <div class="container">
     <ul class="notes">
         <li *ngFor="let note of notes">
-            <button (click)="actions()">
+            <button (click)="actions(note.title)">
                 <span [class.note]="isDone">{{note.title}}</span>
                 <br>
                 <span [class.note]="isDone">{{note.text}}</span>

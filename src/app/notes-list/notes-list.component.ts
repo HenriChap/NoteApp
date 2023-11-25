@@ -13,7 +13,8 @@ import { NgFor } from '@angular/common';
 export class NotesListComponent {
   notes = NOTES;
   isDone:boolean = false;
-  actions(){
+  actions(title:string){
     this.isDone = !this.isDone;
+    alert(title + " is done!")
   }
 }
