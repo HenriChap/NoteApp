@@ -12,8 +12,8 @@ import { NgFor } from '@angular/common';
 })
 export class NotesListComponent {
   notes = NOTES;
-
-  show(title:string){
-    alert(title);
+  isDone:boolean = false;
+  actions(){
+    this.isDone = !this.isDone;
   }
 }
