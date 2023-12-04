@@ -1,10 +1,10 @@
 <div class="container">
     <ul class="notes">
         <li *ngFor="let note of notes">
-            <button (click)="actions(note.title)">
-                <span [class.note]="isDone">{{note.title}}</span>
+            <button (click)="actions(note)">
+                <span [class.note]="note.isDone">{{note.title}}</span>
                 <br>
-                <span [class.note]="isDone">{{note.text}}</span>
+                <span [class.note]="note.isDone">{{note.text}}</span>
             </button>
         </li>
     </ul>
