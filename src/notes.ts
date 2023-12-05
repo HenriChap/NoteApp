@@ -8,13 +8,7 @@ export const NOTES: Note[] =[
     {
         id:1,
         title:'First task',
-        text: 'Making a list of notes',
+        text: 'Make a list of tasks',
         isDone: false
     },
-    {
-        id:2,
-        title:'Second task',
-        text: 'Add new items to the list',
-        isDone: false
-    }
 ];

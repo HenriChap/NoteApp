@@ -31,7 +31,7 @@ export class AddNoteComponent {
         text: text,
         isDone: false
       };
-      NOTES.unshift(newNote);
+      NOTES.push(newNote);
       this.addNoteForm.reset();
 
     }
