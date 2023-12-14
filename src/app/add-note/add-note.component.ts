@@ -4,11 +4,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { NOTES } from '../../notes';
 import { Router } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-add-note',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, RouterModule],
   templateUrl: './add-note.component.html',
   styleUrl: './add-note.component.css'
 })
@@ -18,6 +19,7 @@ export class AddNoteComponent {
     title: new FormControl('', Validators.required),
     text: new FormControl('', Validators.required)
   });
+  //criação de uma instância
   router = inject(Router);
   // Método para adicionar uma nova nota.
   addNote(){
