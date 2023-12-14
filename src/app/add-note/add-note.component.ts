@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { NOTES } from '../../notes';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-note',
@@ -17,6 +18,7 @@ export class AddNoteComponent {
     title: new FormControl('', Validators.required),
     text: new FormControl('', Validators.required)
   });
+  router = inject(Router);
   // Método para adicionar uma nova nota.
   addNote(){
     // Recupera o valor dos campos 'title' e 'text' do formulário. Se algum campo estiver vazio, atribui uma string vazia.
@@ -41,7 +43,7 @@ export class AddNoteComponent {
        // Adiciona a nova nota no fim do array de nota
       NOTES.push(newNote);
       this.addNoteForm.reset();
-
+      this.router.navigateByUrl('/');
     }
   }
 }
